@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+        <title>OMR Result</title>
+</head>
+<body>
+    <h2>OMR Result</h2>
+    <p>Score: {{ score }}%</p>
+    <p>Correct Answers: {{ correct }} / {{ total }}</p>
+    <h3>Answers Selected:</h3>
+    <ul>
+    {% for q, ans in answers.items() %}
+        <li>Q{{ q }}: Option {{ ans }}</li>
+    {% endfor %}
+    </ul>
+</body>
+     </head>
+</html>
